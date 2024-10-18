@@ -9,7 +9,7 @@ import life.pojo.Dog;
 public class TestInheritableThreadLocal {
     private InheritableThreadLocal<Dog> inheritableThreadLocal = new InheritableThreadLocal<>();
     /**
-     * ÔÚÒ»¸ö·½·¨Àï¿ÉÒÔÉèÖÃÕâ¸öÖµ
+     * åœ¨ä¸€ä¸ªæ–¹æ³•é‡Œå¯ä»¥è®¾ç½®è¿™ä¸ªå€¼
      * @param dog
      */
     public void setDog(Dog dog){
@@ -17,7 +17,7 @@ public class TestInheritableThreadLocal {
     }
 
     /**
-     * ÔÚÁíÒ»¸ö·½·¨£¨Ö»ÒªÊÇÒ»¸öÏß³Ì¾Í¿ÉÒÔ£©Àï¾Í¿ÉÒÔµÃµ½Õâ¸öÖµ£¬½ø¶øÊµÏÖµÇÂ¼À¹½ØÆ÷Í³Ò»×¢ÈëÓÃ»§µÇÂ¼ĞÅÏ¢µÈ
+     * åœ¨å¦ä¸€ä¸ªæ–¹æ³•ï¼ˆåªè¦æ˜¯ä¸€ä¸ªçº¿ç¨‹å°±å¯ä»¥ï¼‰é‡Œå°±å¯ä»¥å¾—åˆ°è¿™ä¸ªå€¼ï¼Œè¿›è€Œå®ç°ç™»å½•æ‹¦æˆªå™¨ç»Ÿä¸€æ³¨å…¥ç”¨æˆ·ç™»å½•ä¿¡æ¯ç­‰
      * @return
      */
     public Dog getDog(){
@@ -26,14 +26,14 @@ public class TestInheritableThreadLocal {
 
     public static void main(String[] args) {
         TestInheritableThreadLocal testInheritableThreadLocal = new TestInheritableThreadLocal();
-        // ÔÚmainÏß³ÌÖĞÉèÖÃÖµ
-        testInheritableThreadLocal.inheritableThreadLocal.set(new Dog("¶¹¶¹", 3));
-        // Èç¹ûÊ¹ÓÃµÄÊÇthreadLocal£¬ÔÚ×ÓÏß³ÌÊÇÎŞ·¨·ÃÎÊµ½Õâ¸öÊı¾İµÄ£¬¶øÊ¹ÓÃÁËinheritableThreadLocal£¬
-        // ¾Í¿ÉÒÔÔÚ×ÓÏß³ÌÖĞ»ñÈ¡µ½¸¸Ïß³ÌÖĞÉèÖÃµÄÖµ
+        // åœ¨mainçº¿ç¨‹ä¸­è®¾ç½®å€¼
+        testInheritableThreadLocal.inheritableThreadLocal.set(new Dog("è±†è±†", 3));
+        // å¦‚æœä½¿ç”¨çš„æ˜¯threadLocalï¼Œåœ¨å­çº¿ç¨‹æ˜¯æ— æ³•è®¿é—®åˆ°è¿™ä¸ªæ•°æ®çš„ï¼Œè€Œä½¿ç”¨äº†inheritableThreadLocalï¼Œ
+        // å°±å¯ä»¥åœ¨å­çº¿ç¨‹ä¸­è·å–åˆ°çˆ¶çº¿ç¨‹ä¸­è®¾ç½®çš„å€¼
         new Thread(() -> {
             System.out.println(Thread.currentThread().getName() + "-->" + testInheritableThreadLocal.inheritableThreadLocal.get());
-        }, "×ÓÏß³Ì1").start();
-        // ½á¹û±íÃ÷£ºÔÚ×ÓÏß³Ì1ÖĞ¿ÉÒÔ·ÃÎÊµ½¸¸Ïß³ÌÖĞµÄInheritableThreadLocalµÄÖµ
+        }, "å­çº¿ç¨‹1").start();
+        // ç»“æœè¡¨æ˜ï¼šåœ¨å­çº¿ç¨‹1ä¸­å¯ä»¥è®¿é—®åˆ°çˆ¶çº¿ç¨‹ä¸­çš„InheritableThreadLocalçš„å€¼
 
     }
 }
