@@ -1,4 +1,4 @@
-package life.pojo;
+package com.javatoai.pojo;
 
 /**
  * @author WangZhen

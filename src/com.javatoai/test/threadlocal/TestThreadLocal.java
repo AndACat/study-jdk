@@ -1,4 +1,4 @@
-package life.test.threadlocal;
+package com.javatoai.test.threadlocal;
 
 import life.pojo.Dog;
 

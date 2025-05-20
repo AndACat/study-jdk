@@ -1,4 +1,5 @@
-package life.pojo;/**
+package com.javatoai.pojo;
+/**
  *
  * @author WangZhen
  * @Date 2024/9/21 0:30

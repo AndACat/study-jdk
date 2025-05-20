@@ -1,4 +1,4 @@
-package life.unit.io;
+package com.javatoai.unit.io;
 
 import org.junit.Test;
 
